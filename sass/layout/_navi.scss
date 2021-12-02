@@ -138,14 +138,30 @@ ul {
   transition: 0.3s;
   visibility: hidden;
   overflow: hidden;
+  opacity: 0;
+  transform: translateY(10px);
 }
 .links a:hover {
   color: $color-tertiary-dark;
 }
 .container.active .links a {
   visibility: visible;
-  transition-delay: 0.2s;
+  // transition-delay: 0.2s;
+  animation: appear 0.5s forwards ease 0.2s;
 }
+@keyframes appear {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+  }
+}
+
 .main.hideAll,
 .footer.hideAll {
   display: none;
