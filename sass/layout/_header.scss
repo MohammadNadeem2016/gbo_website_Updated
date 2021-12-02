@@ -1,47 +1,150 @@
-.header {
-  height: 95vh;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba($color-primary-light, 0.8),
-      rgba($color-primary-dark, 0.8)
-    ),
-    url(../img/hero.jpg);
-  background-position: top;
-  background-size: cover;
-  background-repeat: no-repeat;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
+// Slider Start
+.slider {
   position: relative;
-
-  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
-    background-image: linear-gradient(
-        to right bottom,
-        rgba($color-secondary-light, 0.8),
-        rgba($color-secondary-dark, 0.8)
-      ),
-      url(../img/hero.jpg);
-  }
-
-  @include respond(phone) {
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-  }
-  &__logo-box {
-    position: absolute;
-    top: 2.5rem;
-    left: 2.5rem;
-  }
-  &__logo {
-    height: 2.1875rem;
-  }
-  &__text-box {
-    /* text-align: center; */
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  &__btn-discover {
-    text-align: center;
-  }
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  left: 0;
+  background-color: $color-primary-light;
+  //min-height: 100vh;
+  //width: 100%;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease-in-out;
 }
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  transform-style: preserve-3d;
+}
+.slide.current {
+  opacity: 1;
+}
+.slide .content {
+  position: absolute;
+  bottom: 70px;
+  left: -600px;
+  opacity: 0;
+  width: 600px;
+  line-height: 1.4;
+  background-color: rgba($color-primary-light, 0.8);
+  color: $color-tertiary-dark;
+  padding: 10px 25px;
+}
+.slide.current .content {
+  opacity: 1;
+  transform: translateX(600px);
+  transition: all 0.7s ease-in-out 0.3s;
+}
+.slide:nth-child(1) {
+  background: url(../img/img4.jpg) no-repeat center center/cover;
+}
+.slide:nth-child(2) {
+  background: url(../img/img5.jpg) no-repeat center center/cover;
+}
+.slide:nth-child(3) {
+  background: url(../img/img7.jpg) no-repeat center center/cover;
+}
+.slide:nth-child(4) {
+  background: url(../img/img3.jpg) no-repeat center center/cover;
+}
+.slide:nth-child(5) {
+  background: url(../img/img1.jpg) no-repeat center center/cover;
+}
+
+.buttons button#next {
+  position: absolute;
+  top: 50%;
+  right: 45px;
+  transition-delay: 0.4s;
+  z-index: 20;
+}
+.buttons button#prev {
+  position: absolute;
+  top: 50%;
+  left: 45px;
+  transition-delay: 0.2s;
+}
+.container.active button#next {
+  transition-delay: 0s;
+  visibility: hidden;
+  // top: 47%;
+  // right: 42%;
+}
+.container.active button#prev {
+  transition-delay: 0.2s;
+  visibility: hidden;
+  // top: 50%;
+  // left: 15px;
+}
+.buttons button {
+  border: 2px solid $color-tertiary-dark;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 13px 15px;
+  border-radius: 50%;
+  color: $color-primary-light;
+  outline: none;
+  transition: all 0.2s ease-in;
+}
+
+.buttons button:hover {
+  background-color: $color-primary-light;
+  color: $color-tertiary-dark;
+  transition: all 0.3s ease-in;
+}
+
+// Slider End
+
+// .header {
+//   height: 95vh;
+//   background-image: linear-gradient(
+//       to right bottom,
+//       rgba($color-primary-light, 0.8),
+//       rgba($color-primary-dark, 0.8)
+//     ),
+//     url(../img/hero.jpg);
+//   background-position: top;
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
+//   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0% 100%);
+//   position: relative;
+
+//   @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+//     background-image: linear-gradient(
+//         to right bottom,
+//         rgba($color-secondary-light, 0.8),
+//         rgba($color-secondary-dark, 0.8)
+//       ),
+//       url(../img/hero.jpg);
+//   }
+
+//   @include respond(phone) {
+//     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+//     clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+//   }
+//   &__logo-box {
+//     position: absolute;
+//     top: 2.5rem;
+//     left: 2.5rem;
+//   }
+//   &__logo {
+//     height: 2.1875rem;
+//   }
+//   &__text-box {
+//     /* text-align: center; */
+//     position: absolute;
+//     top: 40%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//   }
+//   &__btn-discover {
+//     text-align: center;
+//   }
+// }
