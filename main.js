@@ -65,3 +65,8 @@ const prevSlide= ()=>{
         mainhideMain.classList.toggle("hideAll");
         mainhideFooter.classList.toggle("hideAll");
     }) 
+    var delayInMilliseconds = 3000; //1 second
+
+    setTimeout(function() {
+      //your code to be executed after 1 second
+    }, delayInMilliseconds);
