@@ -65,8 +65,27 @@ const prevSlide= ()=>{
         mainhideMain.classList.toggle("hideAll");
         mainhideFooter.classList.toggle("hideAll");
     }) 
-    var delayInMilliseconds = 3000; //1 second
+   
+    // Scrolling Menu Appear Start
+    // document.addEventListener("DOMContentLoaded", function(){
+    //     window.addEventListener('scroll', function() {
+    //         if (window.scrollY > 50) {
+    //         //   document.getElementById('navbar_top').classList.add('fixed-top');
+    //           // add padding top to show content behind navbar
+    //           navbar_height = document.querySelector('.navbar').offsetHeight;
+    //         //   document.getElementById('navbar_height').style.marginTop = "5rem";
+    //          } //  else {
+    //         //   document.getElementById('navbar_top').classList.remove('fixed-top');
+    //         //    // remove padding top from body
+    //         //   document.body.style.paddingTop = '0';
+    //         // } 
+    //     });
+    //   }); 
 
-    setTimeout(function() {
-      //your code to be executed after 1 second
-    }, delayInMilliseconds);
+
+
+    //   $(window).bind('resize', function(){ 
+    //     var barWidth = $(".topBar").width(); 
+    //     $(".barModules li").css('margin-left', my dynamic value here));
+    // });
+     // Scrolling Menu Appear End

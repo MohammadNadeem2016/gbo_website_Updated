@@ -893,7 +893,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 100000;
   height: 3rem;
   transition: all 0.9s ease-in;
   background-color: rgba(0, 0, 0, 0.4); }
