@@ -89,3 +89,14 @@ const prevSlide= ()=>{
     //     $(".barModules li").css('margin-left', my dynamic value here));
     // });
      // Scrolling Menu Appear End
+
+    //  function scrollFunction() {
+    //     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    //         document.getElementsByClassName(".bar").style.visibility = 'hidden';
+          
+    //     } else {
+    //         document.getElementsByClassName(".bar").style.visibility = 'visible';
+          
+    //     }
+    //   }
+    //   window.onscroll = function() {scrollFunction()};
