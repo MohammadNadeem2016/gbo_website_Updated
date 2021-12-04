@@ -879,7 +879,7 @@ body {
   color: #5643fa;
   transition: all 0.3s ease-in; }
 
-.container {
+.containerAni {
   position: relative;
   min-height: 100vh;
   width: 100%;
@@ -887,6 +887,16 @@ body {
   background-image: linear-gradient(135deg, #ff7730 0%, #ffb900 74%);
   overflow-x: hidden;
   transform-style: preserve-3d; }
+
+.menuContainer {
+  position: fixed;
+  height: 3rem;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2000; }
 
 .navbar {
   position: fixed;
@@ -896,7 +906,8 @@ body {
   z-index: 100000;
   height: 3rem;
   transition: all 0.9s ease-in;
-  background-color: rgba(0, 0, 0, 0.4); }
+  background-color: rgba(0, 0, 0, 0.4);
+  margin-top: 0rem; }
 
 .menu {
   max-width: 72rem;
@@ -925,7 +936,8 @@ body {
   cursor: pointer;
   display: flex;
   align-items: center;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+  visibility: visible; }
 
 .bar {
   width: 1.9rem;
@@ -933,7 +945,8 @@ body {
   border-radius: 3px;
   background-color: #28b485;
   transition: 0.5s;
-  position: relative; }
+  position: relative;
+  visibility: visible; }
 
 .bar::before,
 .bar::after {
