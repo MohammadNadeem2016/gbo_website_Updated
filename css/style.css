@@ -1131,6 +1131,13 @@ ul {
 .container.active .slider:hover {
   transform: perspective(1300px) rotateY(20deg) translateZ(340px) scale(0.5); }
 
+.scrollDown {
+  visibility: hidden;
+  opacity: 0; }
+
+.scrollBorderBottom {
+  filter: drop-shadow(0 10px 20px #ffb900); }
+
 .section-about {
   background-color: #f7f7f7;
   padding: 15.625rem 0;

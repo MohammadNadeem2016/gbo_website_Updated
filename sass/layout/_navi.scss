@@ -309,7 +309,14 @@ ul {
 .container.active .slider:hover {
   transform: perspective(1300px) rotateY(20deg) translateZ(340px) scale(0.5);
 }
-
+.scrollDown {
+  visibility: hidden;
+  opacity: 0;
+}
+.scrollBorderBottom {
+  //border-bottom: 2px solid blanchedalmond;
+  filter: drop-shadow(0 10px 20px rgb(255, 185, 0));
+}
 // shadow end
 
 // Nav Bar End

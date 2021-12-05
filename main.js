@@ -55,6 +55,7 @@ const prevSlide= ()=>{
     // Navigation Bar
     const hamburger_menu= document.querySelector(".hamburger-menu");
     const container= document.querySelector(".container");
+    const menuContainer= document.querySelector(".menuContainer");
     
     hamburger_menu.addEventListener("click",()=>{
         container.classList.toggle("active");
@@ -65,6 +66,27 @@ const prevSlide= ()=>{
         mainhideMain.classList.toggle("hideAll");
         mainhideFooter.classList.toggle("hideAll");
     }) 
+   
+
+    // Hidding Hamburger_Menu while scrolling
+    const body = document.body;
+    let lastScroll = 0;
+     window.addEventListener('scroll',() =>{
+        const currentScroll = window.pageYOffset;
+        console.log(window.pageYOffset);
+        if(currentScroll <= 0){
+            hamburger_menu.classList.remove("scrollDown");
+            menuContainer.classList.remove("scrollBorderBottom");
+        }
+         if(currentScroll > lastScroll && !hamburger_menu.classList.contains('scrollDown') ){
+            hamburger_menu.classList.add("scrollDown");
+            menuContainer.classList.add("scrollBorderBottom");
+            
+         }
+         lastScroll = currentScroll;
+     })
+
+
    
     // Scrolling Menu Appear Start
     // document.addEventListener("DOMContentLoaded", function(){
